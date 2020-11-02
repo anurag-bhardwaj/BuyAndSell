@@ -429,15 +429,7 @@ footer
 }
 .payment-desc::-webkit-scrollbar
 {
-    width: 8px;
-}
-.payment-desc::-webkit-scrollbar-track
-{
-    background-color: #cccccc;
-}
-.payment-desc::-webkit-scrollbar-thumb
-{
-    background-color: gray;
+    width: 0px;
 }
 .payment-card
 {
