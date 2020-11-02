@@ -1,14 +1,54 @@
 <div style="margin-top: 10vh;" class="payment-gateway">
     <div class="payment-options">
         <ul>
-            <li>Cash On Delivery</li>
-            <li>Credit/ Debit Card</li>
-            <li>Online Banking</li>
-            <li>Paypal</li>
-            <li>Bank Transfer</li>
-            <li>Pay by Installment (New)</li>
-            <li>Add GiftCard</li>
+            <li><i class="fas fa-wallet"></i> Cash On Delivery</li>
+            <li><i class="far fa-credit-card"></i> Credit/ Debit Card</li>
+            <li><i class="fas fa-university"></i> Online Banking</li>
+            <li><i class="fab fa-paypal"></i> Paypal</li>
+            <li><i class="fas fa-piggy-bank"></i> Bank Transfer</li>
+            <li><i class="fas fa-money-bill-alt"></i> Pay by Installment (New)</li>
+            <li><i class="fas fa-gift"></i> Add GiftCard</li>
         </ul>
     </div>
-    <div class="payment-desc"></div>
+    <div class="payment-desc">
+        <div class="payment-card">
+            <label for="card-number">Card Number</label>
+            <input class="number-input" type="text">
+            <div style="width:100%; display:inline-block">
+                <div class="date-security">
+                    <label for="Expiry">Expiry Date</label>
+                    <select style="padding: 0.25rem; font-size: 1.15rem;">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <select style="padding: 0.25rem; font-size: 1.15rem;">
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                    </select>
+                </div>
+                <div class="date-security">
+                    <label for="security">Security Code</label>
+                    <input type="password">
+                </div>
+            </div>
+            <label for="name">Name on Card</label>
+            <input type="text">
+            <input style="padding: 2%;" class="submit-button" type="submit" value="Go to Next Step">
+        </div>
+    </div>
 </div>

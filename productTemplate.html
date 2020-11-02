@@ -10,6 +10,9 @@
         </div>
         <div class="right-side">
             <h2>{{product.name}}</h2>
+            <div style="text-align: start; margin-top: 5vh;">
+                <h5 style="display: inline-block;">Description: </h5> {{product.description}}
+            </div>
             <div class="card pd-card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Price: {{product.price | currency}}</li>
@@ -22,10 +25,7 @@
                 <div ng-click="chngclass(product.id)" style="cursor: pointer;" ng-class="product.cls"
                     class="add-cart-button">{{cartText}}</div>
             </div>
-            <div style="text-align: start; margin-top: 5vh;">
-                <h5 style="display: inline-block;">Description: </h5> {{product.description}}
-            </div>
-            <p>
+            <p style="margin-top: 5vh;">
                 100% Original Products<br>
                 Free Delivery on order above Rs. 799<br>
                 Pay on delivery might be available<br>
