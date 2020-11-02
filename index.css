@@ -5,6 +5,7 @@
 body
 {
     padding: 1%;
+    z-index: 1;
 }
 body::-webkit-scrollbar
 {
@@ -19,6 +20,35 @@ body::-webkit-scrollbar-thumb
 {
     width: 100%;
     height: 40vh;
+}
+.nav-item
+{
+    opacity: 1;
+}
+.shadow
+{
+    position: absolute;
+    left: 0;
+    top:10vh;
+    width: 100%;
+    height: 1000px;
+    z-index: 2;
+    display: none;
+    background-color: rgba(0,0,0,0.2);
+}
+.nav-item:hover .nav-link 
+{
+    box-shadow: 3px 3px 5px 4px #cccccc;
+}
+.navbar-nav:hover .shadow
+{
+    display: block;
+}
+.shadow:hover
+{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 .carousel-item img
 {
@@ -53,6 +83,7 @@ body::-webkit-scrollbar-thumb
     .card
     {
         width: 18rem;
+        transform: translateX(2%);
     }
 }
 @media all and (min-width:800px)
@@ -71,6 +102,8 @@ body::-webkit-scrollbar-thumb
 {
     position: absolute;
     top: 15px;
+    width: 30px;
+    height: 30px;
     right: 15px;
     background-color: white;
     border-radius: 50%;
@@ -82,17 +115,40 @@ body::-webkit-scrollbar-thumb
 .product-detail
 {
     display: flex;
+    height: 81vh;
+    overflow: hidden;
     flex-wrap: wrap;
 }
 .left-side 
 {
     flex: 2;
+    height: 100%;
+    overflow-y: scroll;
+}
+.left-side::-webkit-scrollbar
+{
+    width: 0;
 }
 .left-side img
 {
     margin-top: 6vh;
     width: 100%;
 }
+.card-img-top
+{
+    opacity: 1;
+    transition: all 1s;
+    overflow: hidden;
+}
+.card-img-top:hover 
+{
+    animation: fade 1s linear;
+    transform: scale(1.25);
+}
+@keyframes fade {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
 .go-back
 {
     font-size: 1.5rem;
@@ -127,8 +183,14 @@ body::-webkit-scrollbar-thumb
 {
     margin-left: 5%;
     flex:3;
+    height: 100%;
     text-align: center;
     margin-top: 3vh;
+    overflow-y: scroll;
+}
+.right-side::-webkit-scrollbar
+{
+    width: 0;
 }
 .right-side p
 {
@@ -139,7 +201,9 @@ body::-webkit-scrollbar-thumb
 {
     .product-detail
     {
-        flex-direction: row;
+        flex-direction: column;
+        overflow: scroll;
+        height: auto;
     }
     .left-side img
     {
@@ -152,10 +216,6 @@ body::-webkit-scrollbar-thumb
     .right-side p
     {
         padding: 5%;
-    }
-    .buy-now
-    {
-        margin-bottom: 10vh;
     }
 }
 .buy-now
@@ -178,10 +238,31 @@ body::-webkit-scrollbar-thumb
 }
 .buy-now:active
 {
-    box-shadow: 2px 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px 2px #ccc;
     transform: translateY(-4px);
     text-decoration: none;
     color: white;
+}
+.add-cart-button
+{
+    padding: 2%;
+    font-weight: 600;
+    background-color: yellow;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.add-cart-button:hover
+{
+    color: white;
+    text-decoration: none;
+}
+.add-cart-button:active
+{
+    color: white;
+    text-decoration: none;
 }
 .alignment-1
 {

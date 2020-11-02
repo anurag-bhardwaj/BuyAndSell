@@ -1,4 +1,4 @@
-<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="margin-top: 8vh;">
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="margin-top: 10vh;">
     <div class="carousel-inner">
         <div class="carousel-item active" data-interval="2000">
             <img src="https://www.shoponcloud.com/images/site-specific/2.jpg" class="d-block w-100" alt="...">
@@ -25,9 +25,9 @@
     <div class="product-item" ng-repeat="product in products">
         <div class="card" style="padding: 4%; text-decoration: none;"
             ng-controller="myProduct">
-            <div class="card-img">
+            <div class="card-img" style="overflow: hidden;">
                 <img src="{{product.img}}" class="card-img-top" alt="product-img" style="max-height: 24vh;">
-                <div ng-click="chngclass(product.id)" class="heart"><i class="fas fa-tags" ng-class="product.cls" style="font-size: 1.25rem;"></i></div>
+                <div ng-click="chngclass(product.id)" class="heart"><i class="fas fa-heart" ng-class="product.cls" style="font-size: 1.25rem; transform: translateX(-6%);"></i></div>
             </div>
             <a href="#!/productTemplate/{{product.id}}" class="card-body" style="text-decoration: none;">
                 <h5 class="card-title">{{product.name}}</h5>

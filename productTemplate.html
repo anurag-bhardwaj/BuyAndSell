@@ -1,4 +1,4 @@
-<div style="margin-top: 7vh;">
+<div style="margin-top: 10vh;">
     <div class="product-detail">
         <div class="left-side">
             <a href="#!/" class="go-back">&larr; go back</a>
@@ -10,17 +10,6 @@
         </div>
         <div class="right-side">
             <h2>{{product.name}}</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur.
-                <div style="text-align: start;">
-                    <h5 style="display: inline-block;">Description: </h5>   {{product.description}}
-                </div>
-            </p>
             <div class="card pd-card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Price: {{product.price | currency}}</li>
@@ -28,6 +17,27 @@
                 </ul>
                 <a href="#!/buynow" class="buy-now">Buy Now</a>
             </div>
+            <span style="font-size: 2rem; padding: 0.5rem; font-weight: bold;">OR</span>
+            <div class="card pd-card">
+                <div ng-click="chngclass(product.id)" style="cursor: pointer;" ng-class="product.cls"
+                    class="add-cart-button">{{cartText}}</div>
+            </div>
+            <div style="text-align: start; margin-top: 5vh;">
+                <h5 style="display: inline-block;">Description: </h5> {{product.description}}
+            </div>
+            <p>
+                100% Original Products<br>
+                Free Delivery on order above Rs. 799<br>
+                Pay on delivery might be available<br>
+                Easy 30 days returns and exchanges<br>
+                Try & Buy might be available<br>
+            </p>
+            <br>
+            <p style="margin-bottom:5vh">
+                <i class="fas fa-seedling" style="font-size: 2.5rem; margin-right: 10px;"></i> 100% ORIGINAL guarantee<br>
+                <i class="fas fa-recycle" style="font-size: 2.5rem; margin-right: 10px;"></i> Return within 30days of receiving your order<br>
+                <i class="fas fa-truck" style="font-size: 2.5rem;  margin-right: 10px;"></i> Get free delivery for every order above Rs. 799<br>
+            </p>
         </div>
     </div>
 </div>

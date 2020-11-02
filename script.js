@@ -55,7 +55,36 @@ var app = angular.module("myModule", ["ngRoute"])
         if (Aparams) {
             $scope.product = products[Aparams - 1];
         }
-
+        $scope.products = products;
+        $scope.cartText="Add To Cart";
+        if(Aparams)
+        {
+            if(products[Aparams-1].cls==="gray")
+            {
+                $scope.cartText="Add To Cart";
+            }
+            else{
+                $scope.cartText="Remove from Cart";
+            }
+        }
+        $scope.chngclass = function (e) {
+            if ($scope.products[e - 1].cls === "gray") {
+                $scope.products[e - 1].cls = "red";
+                $scope.cartText="Remove from Cart";
+            }
+            else {
+                $scope.products[e - 1].cls = "gray";
+                $scope.cartText="Add To Cart";
+            }
+        }
+        $scope.cartAdd = function () {
+            cartProducts=[];
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].cls === "red") {
+                    cartProducts.push(products[i]);
+                }
+            }
+        }
     })
     .controller("addProduct", function ($scope) {
         $scope.productName = "";
