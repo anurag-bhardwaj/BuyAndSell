@@ -1,0 +1,38 @@
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="margin-top: 8vh;">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="2000">
+            <img src="https://www.shoponcloud.com/images/site-specific/2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_663974538_353364.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <img src="https://static.fibre2fashion.com/articleresources/images/7/626/online-shopping-information.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="our-products" ng-controller="myController">
+    <div class="product-item" ng-repeat="product in products">
+        <div class="card" style="padding: 4%; text-decoration: none;"
+            ng-controller="myProduct">
+            <div class="card-img">
+                <img src="{{product.img}}" class="card-img-top" alt="product-img" style="max-height: 24vh;">
+                <div ng-click="chngclass(product.id)" class="heart"><i class="fas fa-tags" ng-class="product.cls" style="font-size: 1.25rem;"></i></div>
+            </div>
+            <a href="#!/productTemplate/{{product.id}}" class="card-body" style="text-decoration: none;">
+                <h5 class="card-title">{{product.name}}</h5>
+                <h6>{{product.price | currency}}</h6>
+            </a>
+        </div>
+    </div>
+</div>

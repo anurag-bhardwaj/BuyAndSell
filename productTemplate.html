@@ -1,0 +1,33 @@
+<div style="margin-top: 7vh;">
+    <div class="product-detail">
+        <div class="left-side">
+            <a href="#!/" class="go-back">&larr; go back</a>
+            <img src="{{product.img}}" height="60%" style="max-height: 50%;">
+            <div class="reviews">
+                <div class="reviews-heading">Reviews</div>
+                <div class="reviews-content">No Reviews</div>
+            </div>
+        </div>
+        <div class="right-side">
+            <h2>{{product.name}}</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur.
+                <div style="text-align: start;">
+                    <h5 style="display: inline-block;">Description: </h5>   {{product.description}}
+                </div>
+            </p>
+            <div class="card pd-card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price: {{product.price | currency}}</li>
+                    <li class="list-group-item">Status: available!</li>
+                </ul>
+                <a href="#!/buynow" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>

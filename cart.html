@@ -1,0 +1,18 @@
+<div style="margin-top: 8vh; text-align: center;">
+    <div ng-class="cartdisplay"
+        style="border:2px dashed blue; background-color: aquamarine; padding: 10px; font-size: 1.5rem; font-weight: bold;">
+        {{cartEmpty}}</div>
+    <div ng-class="!cartdisplay" class="our-products" ng-controller="cartCtrl" style="text-align: start;">
+        <div class="product-item" ng-repeat="cart in cartproducts">
+            <a href="#!/productTemplate/{{cart.id}}" class="card" style="padding: 4%; text-decoration: none;" ng-controller="myProduct">
+                <div class="card-img">
+                    <img src="{{cart.img}}" class="card-img-top" alt="product-img" style="max-height: 24vh;">
+                </div>
+                <div class="card-body" style="text-decoration: none;">
+                    <h5 class="card-title">{{cart.name}}</h5>
+                    <h6>{{cart.price | currency}}</h6>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div style="margin-top: 8vh;">
+    <div class="addproduct-section">
+        <div class="section-1">
+            <div class="section-heading">
+                your own market
+            </div>
+        </div>
+        <div class="section-2">
+            <form style="width: 100%;" ng-submit="submitFunc($event)">
+                <div class="form-group">
+                    <label for="productName" style="font-size: 1.25rem;">Product Name</label>
+                    <input type="text" class="form-control" ng-model="productName">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your cookies with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="price" style="font-size: 1.25rem;">Price</label>
+                    <input type="text" class="form-control" ng-model="price">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1" style="font-size: 1.25rem;">Link for the image</label>
+                    <input type="text" class="form-control" ng-model="imageUrl">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1" style="font-size: 1.25rem;">Description: </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        ng-model="description"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+
+    </div>
+</div>

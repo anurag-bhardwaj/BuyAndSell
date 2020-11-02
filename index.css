@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    padding: 1%;
+}
+body::-webkit-scrollbar
+{
+    width: 0px;
+}
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: gray;
+}
+.carousel-item
+{
+    width: 100%;
+    height: 40vh;
+}
+.carousel-item img
+{
+    height: 100%;
+}
+.our-products
+{
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.product-item
+{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+.card
+{
+    width: 18rem;
+}
+@media all and (max-width:800px)
+{
+    .carousel-item
+    {
+        margin-top: 2vh;
+        width: 100%;
+        height: 30vh;
+    }
+    .card
+    {
+        width: 18rem;
+    }
+}
+@media all and (min-width:800px)
+{
+    .carousel-item
+    {
+        width: 100%;
+        height: 55vh;
+    }
+    .card
+    {
+        width: 18rem;
+    }
+}
+.heart
+{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 2%;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-detail
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left-side 
+{
+    flex: 2;
+}
+.left-side img
+{
+    margin-top: 6vh;
+    width: 100%;
+}
+.go-back
+{
+    font-size: 1.5rem;
+}
+.reviews
+{
+    width: 100%;
+    margin-top: 5vh;
+}
+.reviews-heading
+{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.reviews-content
+{
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    background-color: aquamarine;
+    padding: 2%;
+    font-weight: 600;
+}
+.visibT
+{
+    display: none;
+}
+.visibF
+{
+    display: block;
+}
+.right-side
+{
+    margin-left: 5%;
+    flex:3;
+    text-align: center;
+    margin-top: 3vh;
+}
+.right-side p
+{
+    text-align: start;
+    line-height: 2rem;
+}
+@media all and (max-width:800px)
+{
+    .product-detail
+    {
+        flex-direction: row;
+    }
+    .left-side img
+    {
+        padding: 5%;
+    }
+    .right-side
+    {
+        margin-top: 10vh;
+    }
+    .right-side p
+    {
+        padding: 5%;
+    }
+    .buy-now
+    {
+        margin-bottom: 10vh;
+    }
+}
+.buy-now
+{
+    padding: 2%;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    transition: all 0.3s;
+    text-decoration: none;
+    /* box-shadow: 5px 5px 5px 5px #cccccc; */
+}
+.buy-now:hover
+{
+    transform: translateY(-8px);
+    box-shadow: 5px 5px 5px 5px #cccccc;
+    text-decoration: none;
+    color: white;
+}
+.buy-now:active
+{
+    box-shadow: 2px 2px 2px 2px #cccccc;
+    transform: translateY(-4px);
+    text-decoration: none;
+    color: white;
+}
+.alignment-1
+{
+    width: 71%;
+}
+@media all and (min-width:800px)
+{
+    .alignment-1
+    {
+        width: 92%;
+    }
+}
+footer
+{
+    background-color: black;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+.addproduct-section
+{
+    display: flex;
+    width: 100%;
+    height: 78vh;
+    justify-content: space-between;
+}
+.section-1
+{
+    flex: 1;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url("https://miro.medium.com/max/6000/1*2x4xbhVVG2wIDf6CyxiUyg.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+.section-2
+{
+    padding: 2%;
+    padding-top: 0;
+    flex: 1;
+}
+.section-heading
+{
+    color: white;
+    font-size: 3rem;
+    width: 70%;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    letter-spacing: 1rem;
+    animation: MoveInRight 2s;
+}
+@keyframes MoveInRight
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+.section-1:hover
+{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,1)), url("https://miro.medium.com/max/6000/1*2x4xbhVVG2wIDf6CyxiUyg.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+.section-heading:hover
+{
+    animation: lightup 0.1s infinite;
+}
+@keyframes lightup
+{
+    0%
+    {
+        text-shadow:1px 1px #FF0000;
+    }
+    100%
+    {
+        text-shadow:3px 3px #FF0000;
+    }
+}
+@media all and (max-width:800px)
+{
+    .section-1
+    {
+        flex: 0;
+    }
+    .section-2
+    {
+        flex: 1;
+    }
+    .addproduct-section
+    {
+        margin-bottom: 20vh;
+    }
+}
+.pd-card
+{
+    margin-left: 50%;
+    transform: translateX(-52%);
+}
+.gray
+{
+    color: gray;
+}
+.red
+{
+    color: red;
+}
+.payment-gateway
+{
+    display: flex;
+    height: 85vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.payment-options
+{
+    border-left: 55px solid #255f63;
+    flex:4;
+    background: #f2f2f2;
+}
+.payment-options ul
+{
+    list-style: none;
+}
+.payment-options ul li{
+    padding: 5%;
+    font-size: 1.15rem;
+    transition: all 0.1s;
+}
+.payment-options li:hover
+{
+    background-color: black;
+    color: white;
+}
+.payment-desc
+{
+    flex: 14;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+.payment-desc::-webkit-scrollbar
+{
+    width: 8px;
+}
+.payment-desc::-webkit-scrollbar-track
+{
+    background-color: #cccccc;
+}
+.payment-desc::-webkit-scrollbar-thumb
+{
+    background-color: gray;
+}
