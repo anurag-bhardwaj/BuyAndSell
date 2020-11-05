@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb
 }
 .nav-item:hover .nav-link 
 {
-    box-shadow: 3px 3px 5px 4px #cccccc;
+    box-shadow: 3px 3px 5px 4px black;
 }
 .navbar-nav:hover .shadow
 {
@@ -110,6 +110,7 @@ body::-webkit-scrollbar-thumb
     height: 30px;
     right: 15px;
     background-color: white;
+    border: 1px solid black;
     border-radius: 50%;
     padding: 2%;
     cursor: pointer;
@@ -489,5 +490,39 @@ footer
     .date-security
     {
         width: 100%;
+    }
+}
+.cart-sections
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.cart-section-1
+{
+    flex: 8;
+    /* border: 1px solid red; */
+}
+.cart-section-2
+{
+    flex: 3;
+    /* border: 1px solid black; */
+}
+.cart-buy-all-card
+{
+    width:90%;
+    transform: translateX(5%);
+    box-shadow: 0 0 5px 5px #ccc;
+}
+@media all and (max-width:800px)
+{
+    .cart-section-2
+    {
+        flex: 0;
+        display: none;
+    }
+    .cart-section-1
+    {
+        flex: 1;
     }
 }

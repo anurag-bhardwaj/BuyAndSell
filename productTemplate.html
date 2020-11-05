@@ -2,18 +2,18 @@
     <div class="product-detail">
         <div class="left-side">
             <a href="#!/" class="go-back">&larr; go back</a>
-            <img src="{{product.img}}" height="60%" style="max-height: 50%;">
+            <img src="{{product.img}}" height="60%" style="max-height: 60%;">
             <div class="reviews">
                 <div class="reviews-heading">Reviews</div>
                 <div class="reviews-content">No Reviews</div>
             </div>
         </div>
         <div class="right-side">
-            <h2>{{product.name}}</h2>
+            <h2 style="text-transform: capitalize; font-family: Roboto;">{{product.name}}</h2>
             <div style="text-align: start; margin-top: 5vh;">
                 <h5 style="display: inline-block;">Description: </h5> {{product.description}}
             </div>
-            <div class="card pd-card" style="width: 18rem;">
+            <div class="card pd-card" style="width: 18rem; margin-top: 2vh;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Price: {{product.price | currency}}</li>
                     <li class="list-group-item">Status: available!</li>

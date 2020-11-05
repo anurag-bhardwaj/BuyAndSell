@@ -3,16 +3,38 @@
         style="border:2px dashed blue; background-color: aquamarine; padding: 10px; font-size: 1.5rem; font-weight: bold;">
         {{cartEmpty}}</div>
     <div ng-class="!cartdisplay" class="our-products" ng-controller="cartCtrl" style="text-align: start;">
-        <div class="product-item" ng-repeat="cart in cartproducts">
-            <a href="#!/productTemplate/{{cart.id}}" class="card" style="padding: 4%; text-decoration: none;  overflow: hidden;" ng-controller="myProduct">
-                <div class="card-img" style=" overflow: hidden;">
-                    <img src="{{cart.img}}" class="card-img-top" alt="product-img" style="max-height: 24vh; overflow: hidden;">
+        <div class="cart-sections">
+            <div class="cart-section-1">
+                <div class="product-item" ng-repeat="cart in cartproducts" style="display: inline-block;">
+                    <a href="#!/productTemplate/{{cart.id}}" class="card"
+                        style="padding: 4%; text-decoration: none; height: 18rem;  overflow: hidden;"
+                        ng-controller="myProduct">
+                        <div class="card-img" style=" overflow: hidden;">
+                            <img src="{{cart.img}}" class="card-img-top" alt="product-img"
+                                style="height: 10rem; overflow: hidden;">
+                        </div>
+                        <div class="card-body" style="text-decoration: none;">
+                            <h5 class="card-title">{{cart.name}}</h5>
+                            <h6>{{cart.price | currency}}</h6>
+                        </div>
+                    </a>
                 </div>
-                <div class="card-body" style="text-decoration: none;">
-                    <h5 class="card-title">{{cart.name}}</h5>
-                    <h6>{{cart.price | currency}}</h6>
+            </div>
+            <div class="cart-section-2">
+                <div class="cart-buy-all-card">
+                    <div class="cart-card-title" style="border-bottom: 1px solid #ccc; padding: 2%; font-size: 1.5rem; color: gray; font-weight: bold;">Price Details</div>
+                    <div class="cart-total-items" style="border-bottom: 1px solid #ccc; padding: 2%; line-height: 2.5rem; font-weight: 600;">
+                        <div>Price ( {{totalItems}} items) : {{totalPrice}}</div>
+                        <div>Delivery Charges : <span style="color: green;">Free</span></div>
+                    </div>
+                    <div style="border-bottom: 1px solid #ccc; padding: 2%; line-height: 2.5rem; font-weight: bold; font-size: 1.1rem;">
+                        Total Amount : {{totalPrice | currency}}
+                    </div>
+                    <div style="padding: 2%; line-height: 2.5rem; font-weight: 500; color: green;">
+                        You will save plenty of time on this service
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>
