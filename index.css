@@ -372,11 +372,16 @@ footer
     }
     .section-2
     {
+        color: white;
         flex: 1;
     }
     .addproduct-section
     {
+        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url("https://miro.medium.com/max/6000/1*2x4xbhVVG2wIDf6CyxiUyg.jpeg");
+        background-size: cover;
         margin-bottom: 20vh;
+        height: 92vh;
+        margin-bottom: -10vh;
     }
 }
 .pd-card
@@ -524,5 +529,9 @@ footer
     .cart-section-1
     {
         flex: 1;
+    }
+    .payment-card
+    {
+        border-radius: 5px;
     }
 }
