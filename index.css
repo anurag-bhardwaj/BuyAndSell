@@ -82,8 +82,8 @@ body::-webkit-scrollbar-thumb
     }
     .card
     {
-        width: 18rem;
-        transform: translateX(2%);
+        width: 100%;
+        /* transform: translateX(2%); */
     }
     .shadow
     {
@@ -486,9 +486,9 @@ footer
     }
     .payment-card
     {
-        padding: 5%;
-        width: 98%;
-        left: 2%;
+        /* padding: 5%; */
+        width: 100%;
+        left: 0;
         height: 84vh;
         margin-bottom: 10vh;
     }
