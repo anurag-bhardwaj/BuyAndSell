@@ -23,11 +23,11 @@
 </div>
 <div class="our-products" ng-controller="myController">
     <div class="product-item" ng-repeat="product in products">
-        <div class="card" style="padding: 4%; text-decoration: none; height: 18rem;"
-            ng-controller="myProduct">
-            <div class="card-img" style="overflow: hidden;">
-                <img src="{{product.img}}" class="card-img-top" alt="product-img" style="height: 10rem;">
-                <div ng-click="chngclass(product.id)" class="heart"><i class="fas fa-heart" ng-class="product.cls" style="font-size: 1.25rem; transform: translateX(-11%);"></i></div>
+        <div class="card" style="padding: 4%; text-decoration: none; height: 18rem;" ng-controller="myProduct">
+            <div class="card-img" style="overflow: hidden; height:12rem; ";>
+                <img src="{{product.img}}" class="card-img-top" alt="product-img" style="height:"100%"; width:"100%";overflow: hidden; background-size="contain" ">
+                <div ng-click="chngclass(product.id)" class="heart"><i class="fas fa-heart" ng-class="product.cls"
+                        style="font-size: 1.25rem; transform: translateX(-11%);"></i></div>
             </div>
             <a href="#!/productTemplate/{{product.id}}" class="card-body" style="text-decoration: none;">
                 <h5 class="card-title">{{product.name}}</h5>
